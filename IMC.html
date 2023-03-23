@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeras practicas</title>
+</head>
+<body>
+    <h1>PROGRAMA</h1>
+</body>
+
+
+<script>
+
+function saltarLinea() {
+    
+    document.write("<br>");
+    document.write("<br>");
+
+}
+
+function imprimir(frase) {
+
+  document.write(frase);
+  saltarLinea();
+
+}
+
+function calcularImc(peso, altura,){
+   return(Math.round(peso / (altura*altura)));
+}
+
+
+nombre = prompt("Informe su nombre");
+pesoInformado = prompt( nombre + ", Informe su peso:");
+alturaInformada = prompt(nombre + ", Informe su altura:");
+
+imcCalculado = calcularImc(pesoInformado, alturaInformada);
+imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+if (imcCalculado < 18.5) {
+    imprimir("IMC abajo de lo recomendado");
+}
+
+if (imcCalculado > 18.5 && imcCalculado < 24.9) {
+    imprimir("IMC en niveles normales");
+}
+
+if (imcCalculado > 24.9 && imcCalculado == 25) {
+    imprimir("Usted se encuentra con sobrepeso");
+}
+
+if (imcCalculado > 25){
+    imprimir("Usted tiene obesidad");
+}
+
+
+
+
+</script>
+
+
+
+</html>
